@@ -1,0 +1,12 @@
+[package]
+name = "j4rstest"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+j4rs = { git = "https://github.com/astonbitecode/j4rs" }
+j4rs_derive = "0.1.0"
+serde = { version = "1.0", features = ["derive"] }
