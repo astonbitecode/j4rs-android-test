@@ -46,7 +46,7 @@ fn use_custom_object(i: Instance) -> Result<Instance, String> {
     let jvm: Jvm = Jvm::attach_thread().unwrap();
     let test_dto: TestDto = jvm.to_rust(i).unwrap();
     println!("{:?}", test_dto);
-    let test_dto = TestDto {number: 3333};
+    let test_dto = TestDto {number: 33};
     let ia = InvocationArg::new(&test_dto, "com.example.j4rstest.api.dto.TestDto");
     Instance::try_from(ia).map_err(|error| format!("{}", error))
 }
